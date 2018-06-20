@@ -1,0 +1,27 @@
+<form>
+<!-- <h4>Welche Pflanze hast du fotografiert?</h4> -->
+<mat-form-field>
+  <input matInput placeholder="Pflanzenart">
+</mat-form-field>
+<br>
+<!-- <h4>Wähle einen Titel für dein Bild</h4> -->
+<mat-form-field>
+  <input matInput placeholder="Bildtitel">
+</mat-form-field>
+<br>
+<!-- <h4>Wähle mindestens drei Tags (Schlagwörter)</h4> -->
+<mat-form-field>
+  <input matInput placeholder="Tag">
+</mat-form-field>
+<br>
+<!-- <h4>Welche Lizenz möchtest Du?</h4> -->
+<mat-radio-group>
+  <mat-radio-button value="lizenz-cc"></mat-radio-button>CC 3.0
+  <mat-radio-button value="lizenz-bl"></mat-radio-button>BL 1.0
+</mat-radio-group>
+
+<h4>Bild auswählen</h4>
+<input type="file" accept="image/*" (change)="onFileChanged($event)">
+
+<button (click)="onUpload()" mat-raised-button color="primary">Hochladen</button>
+</form>
